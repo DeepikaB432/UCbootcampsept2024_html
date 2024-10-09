@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<script>
+    x =3;
+    console.log('the value of x is = ' + x)
+    x = x+1;
+    console.log('after x = x+1 the value is = ' + x)
+
+    x +=1;
+    console.log('after x +=1 the value of is = ' + x)
+
+    console.log('before = ' + x);
+    x++;
+    console.log('after = ' + x);
+
+    console.log('before = ++x ' + x);
+    ++x;
+    console.log('after = ++x ' + x);
+
+    // for(let i=1;i<10;i++){
+    //     console.log('the value of i is = ' , i)
+    // }
+    var temp =0;
+    for(let i=1;i<=5;i++){
+        temp = temp+i;
+    }
+    console.log('total = ' ,temp)
+
+    var students = ["Deepika","Mihir","Jose","Darcey"];
+    console.log(students);
+    for(i=0;i<students.length;i++){
+        hellostudents(students[i]);
+    }
+
+    function showName(){
+        var first_name = document.getElementById('first_name').value;
+        var hours = document.getElementById('hours').value;
+        var rate = document.getElementById('rate').value;
+        console.log('the name you entered is ' + first_name + ' Your Salary ' + hours*rate)
+    }
+    function hellostudents(name){
+        console.log('Hello ' + name)
+    }
+
+    // hellostudents('Deepika')
+
+</script>
+<body>
+    Name: <input type="text" name="first_name" id="first_name"><br>
+    Number of Hours: <input type="number" name="hours" id="hours"><br>
+    Current Wage Rate: <input type="number" name="rate" id="rate">
+    <button onclick="showName()">Show Name</button>
+</body>
+</html>
